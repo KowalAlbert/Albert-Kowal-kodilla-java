@@ -25,8 +25,8 @@ public class ShapeCollector {
         return result;
     }
 
-    public String getFigure(int n) {
-        return figures.get(n).getShape();
+    public Shape getFigure(int n) {
+        return figures.get(n);
     }
 
     public String showFigures() {
@@ -35,5 +35,9 @@ public class ShapeCollector {
             theFigures = theFigures + figures.get(i).getShape() + " , ";
         }
         return theFigures;
+    }
+
+    public int getSize() {
+        return figures.size();
     }
 }

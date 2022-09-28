@@ -76,11 +76,11 @@ class ShapeCollectorTestSuite {
         collector.addFigure(circle1);
 
         //When
-        String retrievedShape;
+        Shape retrievedShape;
         retrievedShape = collector.getFigure(0);
 
         //Then
-        Assertions.assertEquals(circle1.getShape(), retrievedShape);
+        Assertions.assertEquals((circle1.getShape() + circle1.getField()), (retrievedShape.getShape() + retrievedShape.getField()));
     }
 
     @Test
