@@ -8,7 +8,7 @@ public class StatisticCalculator {
     private double averageOfCommentsPerUser;
     private double averageOfCommentsPerPost;
 
-    public StatisticCalculator (Statistics statistics) {
+    public void calculateAdvStatistics (Statistics statistics) {
         this.numberOfUsers = statistics.usersNames().size();
         this.numberOfPosts = statistics.postsCount();
         this.numberOfComments = statistics.commentsCount();

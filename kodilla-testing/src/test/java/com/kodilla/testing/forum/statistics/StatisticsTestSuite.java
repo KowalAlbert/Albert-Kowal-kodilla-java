@@ -45,7 +45,8 @@ public class StatisticsTestSuite {
         when(statisticsMock.usersNames()).thenReturn(resultListOfUsers);
         when(statisticsMock.postsCount()).thenReturn(0);
         when(statisticsMock.commentsCount()).thenReturn(1);
-        StatisticCalculator statisticCalculator = new StatisticCalculator(statisticsMock);
+        StatisticCalculator statisticCalculator = new StatisticCalculator();
+        statisticCalculator.calculateAdvStatistics(statisticsMock);
 
         // When
         String theResult = statisticCalculator.showStatistics();
@@ -68,7 +69,8 @@ public class StatisticsTestSuite {
         when(statisticsMock.usersNames()).thenReturn(resultListOfUsers);
         when(statisticsMock.postsCount()).thenReturn(1000);
         when(statisticsMock.commentsCount()).thenReturn(1);
-        StatisticCalculator statisticCalculator = new StatisticCalculator(statisticsMock);
+        StatisticCalculator statisticCalculator = new StatisticCalculator();
+        statisticCalculator.calculateAdvStatistics(statisticsMock);
 
         // When
         String theResult = statisticCalculator.showStatistics();
@@ -91,7 +93,8 @@ public class StatisticsTestSuite {
         when(statisticsMock.usersNames()).thenReturn(resultListOfUsers);
         when(statisticsMock.postsCount()).thenReturn(1);
         when(statisticsMock.commentsCount()).thenReturn(0);
-        StatisticCalculator statisticCalculator = new StatisticCalculator(statisticsMock);
+        StatisticCalculator statisticCalculator = new StatisticCalculator();
+        statisticCalculator.calculateAdvStatistics(statisticsMock);
 
         // When
         String theResult = statisticCalculator.showStatistics();
@@ -114,7 +117,8 @@ public class StatisticsTestSuite {
         when(statisticsMock.usersNames()).thenReturn(resultListOfUsers);
         when(statisticsMock.postsCount()).thenReturn(100);
         when(statisticsMock.commentsCount()).thenReturn(10);
-        StatisticCalculator statisticCalculator = new StatisticCalculator(statisticsMock);
+        StatisticCalculator statisticCalculator = new StatisticCalculator();
+        statisticCalculator.calculateAdvStatistics(statisticsMock);
 
         // When
         String theResult = statisticCalculator.showStatistics();
@@ -137,7 +141,8 @@ public class StatisticsTestSuite {
         when(statisticsMock.usersNames()).thenReturn(resultListOfUsers);
         when(statisticsMock.postsCount()).thenReturn(10);
         when(statisticsMock.commentsCount()).thenReturn(100);
-        StatisticCalculator statisticCalculator = new StatisticCalculator(statisticsMock);
+        StatisticCalculator statisticCalculator = new StatisticCalculator();
+        statisticCalculator.calculateAdvStatistics(statisticsMock);
 
         // When
         String theResult = statisticCalculator.showStatistics();
@@ -159,7 +164,8 @@ public class StatisticsTestSuite {
         when(statisticsMock.usersNames()).thenReturn(resultListOfUsers);
         when(statisticsMock.postsCount()).thenReturn(1);
         when(statisticsMock.commentsCount()).thenReturn(1);
-        StatisticCalculator statisticCalculator = new StatisticCalculator(statisticsMock);
+        StatisticCalculator statisticCalculator = new StatisticCalculator();
+        statisticCalculator.calculateAdvStatistics(statisticsMock);
 
         // When
         String theResult = statisticCalculator.showStatistics();
@@ -181,7 +187,8 @@ public class StatisticsTestSuite {
         when(statisticsMock.usersNames()).thenReturn(resultListOfUsers);
         when(statisticsMock.postsCount()).thenReturn(1);
         when(statisticsMock.commentsCount()).thenReturn(1);
-        StatisticCalculator statisticCalculator = new StatisticCalculator(statisticsMock);
+        StatisticCalculator statisticCalculator = new StatisticCalculator();
+        statisticCalculator.calculateAdvStatistics(statisticsMock);
 
         // When
         String theResult = statisticCalculator.showStatistics();
