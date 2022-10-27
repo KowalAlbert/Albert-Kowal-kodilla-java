@@ -19,9 +19,9 @@ class ArrayOperationsTestSuite  {
         }
 
         //When
-        OptionalDouble testingAverage = ArrayOperations.getAverage(numbers);
+        double testingAverage = ArrayOperations.getAverage(numbers);
 
         //Then
-        assertEquals(OptionalDouble.of(19.5), testingAverage);
+        assertEquals(19.5, testingAverage);
     }
 }
