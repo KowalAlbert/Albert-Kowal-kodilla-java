@@ -32,7 +32,10 @@ class SecondChallengeTestSuite {
         // given
         SecondChallenge secondChallenge = new SecondChallenge();
         // when & then
-        assertDoesNotThrow(() -> secondChallenge.probablyIWillThrowException(1, 1));
+        assertAll(
+                () -> assertDoesNotThrow(() -> secondChallenge.probablyIWillThrowException(1, 1)),
+                () -> assertDoesNotThrow(() -> secondChallenge.probablyIWillThrowException(1.9, 1))
+        );
     }
 
     @Test
