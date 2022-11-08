@@ -44,16 +44,12 @@ public class FlightChecker {
         */
 
         if (airports.containsKey(flight.getArrivalAirport())) {
-            if (airports.containsKey(flight.getDepartureAirport())) {
-                if (airports.get(flight.getArrivalAirport())) {
-                    System.out.println("Flight from " + flight.getDepartureAirport() + " to " + flight.getArrivalAirport() + " checked and verified.");
-                    return true;
-                } else {
-                    System.out.println("Flight from " + flight.getDepartureAirport() + " to " + flight.getArrivalAirport() + " checked but arrival at the chosen airport is unavailable.");
-                    return false;
-                }
+            if (airports.get(flight.getArrivalAirport())) {
+                System.out.println("Flight from " + flight.getDepartureAirport() + " to " + flight.getArrivalAirport() + " checked and verified.");
+                return true;
             } else {
-                throw new RouteNotFoundException("Departure airport incorrect.");
+                System.out.println("Flight from " + flight.getDepartureAirport() + " to " + flight.getArrivalAirport() + " checked but arrival at the chosen airport is unavailable.");
+                return false;
             }
         } else {
             throw new RouteNotFoundException("Arrival airport incorrect.");
@@ -61,15 +57,15 @@ public class FlightChecker {
     }
 
     public static void main(String[] args) {
-        Flight lot = new Flight("Boston", "Seattle");
+        Flight lot = new Flight("San Francisco", "Boston");
         boolean lotMozliwy;
 
         try {
             lotMozliwy = findFlight(lot);
             if(lotMozliwy) {System.out.println("Milego lotu.");}
         } catch (RouteNotFoundException e) {
-            System.out.println("Airport does NOT exist.");
             System.out.println(e);
+            System.out.println("Destination airport does NOT exist.");
         } finally {
             System.out.println("Daje cos w finally, aby nie bylo, ze nic nie dalem.");
         }
