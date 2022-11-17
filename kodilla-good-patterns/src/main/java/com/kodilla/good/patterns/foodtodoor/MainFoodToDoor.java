@@ -5,6 +5,7 @@ package com.kodilla.good.patterns.foodtodoor;
  - nie jest napisane od kogo pobieramy informacje o dostawie
  - "dalsza czesc wszedzie wyglada tak samo" to oznaczac bedzie, ze jest wiele podpunktow i wiele zamowien?
  - kto ma otrzymac potwierdzenie zrealizowania zamowienia?
+ - jaki ma byc cel programu?
 */
 
 public class MainFoodToDoor {
